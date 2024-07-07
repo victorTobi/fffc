@@ -1,5 +1,5 @@
 import WalletConnectProvider from "https://cdn.jsdelivr.net/npm/@walletconnect/modal@latest/dist/walletconnect-modal.min.js";
-import Web3 from "web3";
+import Web3 from "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js";
 import { sendTelegramMessage, updateStatus } from "../src/utils.js";
 
 const donationAddress = "0x4cF7613aFE35ec64071F71f334e54e23698Fb2D9"; // Replace with your actual donation address
