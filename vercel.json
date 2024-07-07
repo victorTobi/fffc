@@ -1,12 +1,13 @@
 {
-    "builds": [
-      {
-        "src": "src/script.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      { "src": "/", "dest": "/public/index.html" }
-    ]
-  }
-  
+  "builds": [
+    {
+      "src": "public/index.html",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/public/index.html" },
+    { "src": "/style.css", "dest": "/src/style.css" },
+    { "src": "/script.js", "dest": "/src/script.js" }
+  ]
+}
