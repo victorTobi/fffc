@@ -1,3 +1,14 @@
+// src/script.js
+import { WalletConnectModal } from 'https://unpkg.com/@walletconnect/modal@latest/dist/esm/index.js';
+
+// Now you can use WalletConnectModal
+try {
+  const modal = new WalletConnectModal();
+  console.log('WalletConnectModal loaded successfully:', modal);
+} catch (error) {
+  console.error('Failed to initialize WalletConnectModal:', error);
+}
+
 import WalletConnectProvider from 'https://unpkg.com/@walletconnect/modal';
 import Web3 from "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js";
 //import { sendTelegramMessage, updateStatus } from "../src/utils.js";
