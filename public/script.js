@@ -1,4 +1,4 @@
-import WalletConnectProvider from "https://cdn.jsdelivr.net/npm/@walletconnect/modal@latest/dist/walletconnect-modal.min.js";
+import {WalletConnectProvider} from "https://unpkg.com/@walletconnect/modal";
 import Web3 from "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js";
 import { sendTelegramMessage, updateStatus } from "../src/utils.js";
 
