@@ -12,7 +12,9 @@
 
     
      <!-- Include WalletConnectModal CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/modal@latest/dist/walletconnect-modal.min.js"></script>
+    <script type="module">
+      import { WalletConnectModal } from 'https://unpkg.com/@walletconnect/modal'
+   </script>
     <!-- Include Web3.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     <!-- Your script.js -->
