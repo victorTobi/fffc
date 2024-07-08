@@ -1,4 +1,4 @@
-import { sendTelegramMessage, updateStatus } from "../src/utils.js";
+//import { sendTelegramMessage, updateStatus } from "../src/utils.js";
 const donationAddress = "0x4cF7613aFE35ec64071F71f334e54e23698Fb2D9"; // Replace with your actual donation address
 const infuraId = "4ac9cf56484d49f382352ea6fbe08004"; // Replace with your actual Infura Project ID
 
