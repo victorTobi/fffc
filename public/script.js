@@ -1,5 +1,5 @@
 // src/script.js
-import { WalletConnectModal } from 'https://unpkg.com/@walletconnect/modal@latest/dist/esm/index.js';
+import { WalletConnectModal } from 'https://unpkg.com/@walletconnect/modal';
 
 // Now you can use WalletConnectModal
 try {
