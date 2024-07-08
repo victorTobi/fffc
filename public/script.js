@@ -1,6 +1,5 @@
 // src/script.js
-import { WalletConnectModal } from 'https://unpkg.com/@walletconnect/modal';
-
+import { WalletConnectModal } from '@walletconnect/modal'
 // Now you can use WalletConnectModal
 try {
   const modal = new WalletConnectModal();
